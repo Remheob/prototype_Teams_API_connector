@@ -1,1 +1,1 @@
-# prototype_Teams_API_connector
+<p align="center"> This repository  includes all source code for the graphical dashboard, the database and the machine learning classifier of the software prototype presented in <i>"(How) can machine learning support eTutors in an online formal collaborative learning setting?"</i> by the authors Arne Böhmer, Maximilian Musch and Hannes Schubert. </p>
