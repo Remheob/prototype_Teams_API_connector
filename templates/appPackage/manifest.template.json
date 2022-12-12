@@ -1,0 +1,128 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.14/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.14",
+    "version": "1.0.0",
+    "id": "{{state.fx-resource-appstudio.teamsAppId}}",
+    "packageName": "com.microsoft.teams.extension",
+    "developer": {
+        "name": "Teams App, Inc.",
+        "websiteUrl": "https://www.example.com",
+        "privacyUrl": "https://www.example.com/termofuse",
+        "termsOfUseUrl": "https://www.example.com/privacy"
+    },
+    "icons": {
+        "color": "{{config.manifest.icons.color}}",
+        "outline": "{{config.manifest.icons.outline}}"
+    },
+    "name": {
+        "short": "{{config.manifest.appName.short}}",
+        "full": "{{config.manifest.appName.full}}"
+    },
+    "description": {
+        "short": "{{config.manifest.description.short}}",
+        "full": "{{config.manifest.description.full}}"
+    },
+    "accentColor": "#FFFFFF",
+    "bots": [
+        {
+            "botId": "{{state.fx-resource-bot.botId}}",
+            "scopes": [
+                "personal",
+                "team",
+                "groupchat"
+            ],
+            "supportsFiles": false,
+            "isNotificationOnly": false,
+            "commandLists": [
+                {
+                    "scopes": [
+                        "personal",
+                        "team",
+                        "groupchat"
+                    ],
+                    "commands": [
+                        {
+                            "title": "helloWorld",
+                            "description": "A helloworld command to send a welcome message"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "composeExtensions": [],
+    "configurableTabs": [],
+    "staticTabs": [],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": [
+        "{{state.fx-resource-bot.domain}}"
+    ],
+    "authorization": {
+        "permissions": {
+            "resourceSpecific": [
+                {
+                    "name": "TeamSettings.Read.Group",
+                    "type": "Application"
+                },
+                {
+                    "name": "ChannelMessage.Read.Group",
+                    "type": "Application"
+                },
+                {
+                    "name": "TeamSettings.Edit.Group",
+                    "type": "Application"
+                },
+                {
+                    "name": "ChannelSettings.ReadWrite.Group",
+                    "type": "Application"
+                },
+                {
+                    "name": "Channel.Create.Group",
+                    "type": "Application"
+                },
+                {
+                    "name": "Channel.Delete.Group",
+                    "type": "Application"
+                },
+                {
+                    "name": "TeamsApp.Read.Group",
+                    "type": "Application"
+                },
+                {
+                    "name": "TeamsTab.Read.Group",
+                    "type": "Application"
+                },
+                {
+                    "name": "TeamsTab.Create.Group",
+                    "type": "Application"
+                },
+                {
+                    "name": "TeamsTab.ReadWrite.Group",
+                    "type": "Application"
+                },
+                {
+                    "name": "TeamsTab.Delete.Group",
+                    "type": "Application"
+                },
+                {
+                    "name": "Member.Read.Group",
+                    "type": "Application"
+                },
+                {
+                    "name": "Owner.Read.Group",
+                    "type": "Application"
+                }
+            ]
+        }
+    },
+    "webApplicationInfo": {
+        "id": "a32ff2f0-6051-493c-92e2-c492fb578207",
+        "resource": "To be modified",
+        "applicationPermissions": [
+            "ChannelMessage.Read.Group"
+        ]
+    }
+}
